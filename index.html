@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth focus:scroll-auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,111 +9,149 @@
   </head>
   <body class="bg-purple-50 overflow-x-hidden">
     <div class="mx-auto items-center">
-      <header class="bg-white bg-opacity-30 py-6 z-50 sticky top-0 shadow-md">
+      <header
+        class="bg-white backdrop-blur-[8px] bg-opacity-30 py-6 z-50 sticky top-0 shadow-md"
+      >
         <div class="flex md:justify-between">
-          <div class="md:hidden flex px-6 py-0.5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-8 h-8"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
+          <div id="mobile-menu">
+            <div class="md:hidden flex px-6 py-0.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
           </div>
           <div class="md:mx-auto">
-            <h1 class="font-bold text-3xl">
-              <span class="text-purple-600">お</span>Bento<span
-                class="text-purple-600"
-                >.</span
-              >
-            </h1>
+            <div id="web-name">
+              <h1 class="font-bold text-3xl">
+                <span class="text-purple-600">お</span>Bento<span
+                  class="text-purple-600"
+                  >.</span
+                >
+              </h1>
+            </div>
           </div>
           <div class="md:flex hidden mx-auto">
-            <div class="flex gap-12">
-              <ul class="flex gap-10 items-center">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
-              <div class="w-1 h-9 rounded-full bg-purple-400"></div>
-              <div class="flex gap-5">
-                <div id="register">
+            <div id="listmenu-name">
+              <div class="flex gap-12">
+                <ul class="flex gap-10 items-center">
                   <a href="#">
-                    <button
-                      class="bg-white hover:bg-purple-50 px-6 py-1.5 rounded-full outline outline-offset-2 outline-purple-200 relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-purple-700 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700"
-                    >
-                      <p class="text-purple-600">Register</p>
-                    </button>
+                    <li>Home</li>
                   </a>
-                </div>
-                <div id="login">
                   <a href="#">
-                    <button
-                      class="bg-purple-400 hover:bg-purple-500 px-6 py-1.5 rounded-full outline outline-offset-2 outline-purple-400 relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-purple-700 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700"
-                    >
-                      <p class="text-white">Login</p>
-                    </button>
+                    <li>About</li>
                   </a>
+                  <a href="#">
+                    <li>Contact</li>
+                  </a>
+                </ul>
+                <div class="w-1 h-9 rounded-full bg-purple-400"></div>
+                <div id="entry-button">
+                  <div class="flex gap-5">
+                    <div id="register">
+                      <a href="#">
+                        <button
+                          class="bg-white hover:bg-purple-50 px-6 py-1.5 rounded-full outline outline-offset-2 outline-purple-200 relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-purple-700 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700"
+                        >
+                          <p class="text-purple-600">Register</p>
+                        </button>
+                      </a>
+                    </div>
+                    <div id="login">
+                      <a href="#">
+                        <button
+                          class="bg-purple-400 hover:bg-purple-500 px-6 py-1.5 rounded-full outline outline-offset-2 outline-purple-400 relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-purple-700 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700"
+                        >
+                          <p class="text-white">Login</p>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <div class="py-52 z-30">
-        <div class="relative">
+      <section id="hero">
+        <div class="md:py-64 py-52 z-30">
+          <div class="relative">
+            <div
+              class="absolute -bottom-32 -left-32 md:w-[700px] md:h-[700px] bg-gradient-to-r from-purple-50 to-purple-300 rounded-full opacity-100 mix-blend-multiply filter blur-xl animate-blob"
+            ></div>
+            <div
+              class="absolute -top-32 -right-48 md:w-[600px] md:h-[600px] bg-gradient-to-r from-purple-300 to-purple-50 rounded-full opacity-70 mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"
+            ></div>
+          </div>
+          <div>
+            <h2
+              class="text-black font-bold md:text-6xl text-4xl md:w-[600px] mx-auto text-center"
+            >
+              Bento<span class="text-purple-600">-</span>grids UI with
+            </h2>
+          </div>
           <div
-            class="absolute -bottom-32 -left-32 md:w-[700px] md:h-[700px] bg-gradient-to-r from-purple-50 to-purple-300 rounded-full opacity-100 mix-blend-multiply filter blur-xl animate-blob"
-          ></div>
-          <div
-            class="absolute -top-32 -right-48 md:w-[600px] md:h-[600px] bg-gradient-to-r from-purple-300 to-purple-50 rounded-full opacity-70 mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"
-          ></div>
-        </div>
-        <div>
-          <h2
-            class="text-black font-bold md:text-6xl text-4xl md:w-[600px] mx-auto text-center"
+            class="flex py-2 font-bold md:text-6xl text-4xl md:w-[500px] mx-auto text-center items-center justify-center"
           >
-            Bento<span class="text-purple-600">-</span>grids UI with
-          </h2>
-        </div>
-        <div
-          class="flex py-2 font-bold md:text-6xl text-4xl md:w-[500px] mx-auto text-center items-center justify-center"
-        >
-          <div class="mx-auto flex gap-3">
-            <h3 class="text-purple-600">Tailwind CSS</h3>
-            <img
-              src="src/assets/images/tailwind-css.svg"
-              class="md:w-[70px] w-10"
-            />
+            <div class="mx-auto flex gap-3">
+              <h3 class="text-purple-600">Tailwind CSS</h3>
+              <img
+                src="src/assets/images/tailwind-css.svg"
+                class="md:w-[70px] w-10"
+              />
+            </div>
+          </div>
+          <div class="py-0.5 flex justify-between">
+            <div class="flex flex-col mx-auto items-center">
+              <p class="text-gray-600 text-lg">
+                Arround
+                <span class="text-purple-600 font-bold">10</span> template of
+                wireframe UI
+              </p>
+            </div>
+          </div>
+          <div class="py-6">
+            <div class="items-center text-center mx-auto">
+              <a href="#desc">
+                <button
+                  class="px-8 z-30 py-2 bg-purple-500 rounded-3xl text-white relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-purple-700 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 text-xl"
+                >
+                  Get it now!
+                </button>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="py-0.5 flex justify-between">
-          <div class="flex flex-col mx-auto items-center">
-            <p class="text-gray-600 text-lg">
-              Arround <span class="text-purple-600 font-bold">10</span> template
-              of wireframe UI
-            </p>
+      </section>
+      <section id="desc">
+        <div class="container mx-auto md:p-40 md:py-0 md:pb-0 md:pt-0">
+          <div class="bg-white md:bg-opacity-30 rounded-3xl shadow-lg">
+            <div class="py-12 text-center">
+              <h2 class="text-3xl font-bold py-10 text-purple-600">
+                What is Bento?
+              </h2>
+              <p class="text-gray-600 text-justify md:px-32 px-14">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex
+                aliquid deserunt ullam, dolorum sint harum expedita? Pariatur
+                est facilis delectus. Sed sapiente sint atque assumenda dicta
+                itaque minus soluta enim. Veniam a, tenetur ab quaerat,
+                consequatur eaque doloribus consequuntur obcaecati facilis dolor
+                nisi eligendi odio. Necessitatibus dolorum maiores iste!
+              </p>
+            </div>
           </div>
         </div>
-        <div class="py-6">
-          <div class="items-center text-center mx-auto">
-            <a href="#">
-              <button
-                class="px-8 z-30 py-2 bg-purple-500 rounded-3xl text-white relative font-semibold after:-z-20 after:absolute after:h-1 after:w-1 after:bg-purple-700 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 text-xl"
-              >
-                Get it now!
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
